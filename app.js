@@ -99,7 +99,7 @@ const currencyfreaks = (From, To, callback) => {
                     const baseCurrency = Object.entries(response.body.rates)
                     const filtered = baseCurrency.filter(arr => arr[0] === toCountry).flat()
                     const toCurrency = filtered[0]
-                    const amount = Number(filtered[1]).toFixed(2)
+                    const amount = Number(filtered[1])
                     const base = response.body.base
                     const receive = To
                     // const array = [countrySender, countryReceiver, amount, updated, date,]
@@ -128,6 +128,8 @@ const currencyfreaks = (From, To, callback) => {
         }
 
 }
+
+// console.log('g')
 
 
 app.get('/currencycheck', (req, res) => {

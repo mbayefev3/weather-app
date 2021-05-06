@@ -16,7 +16,7 @@ const loaded = document.querySelector('.loaded')
 // <div class="amount"></div>
 // <div class="updated"></div>
 // <div class="date"></div>
-
+// console.log('g')
 summary.classList.add('hide')
 
 const array = [countrySender, countryReceiver, amount, updated, date]
@@ -88,6 +88,7 @@ currencyForm.addEventListener('submit', (e) => {
                         amount.appendChild(span)
                     } else {
                         p.textContent = dataCurrency[i][1]
+                        // console.log(p)
                         arr.appendChild(p)
 
                     }
